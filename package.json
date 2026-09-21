@@ -14,6 +14,7 @@
     "dev:promises": "tsx src/aula26/promises.ts",
     "dev:automatizaveis": "tsx src/atividades/automatizaveis.ts",
     "dev:casosdeteste": "tsx src/atividades/casos-de-teste.ts",
+    "test": "vitest",
     "build": "tsc",
     "start": "node ."
   },
@@ -22,7 +23,8 @@
     "@types/node": "^26.5.0",
     "@types/prompt-sync": "^4.2.3",
     "tsx": "^4.23.13",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1"
   },
   "dependencies": {
     "express": "^5.2.1",
