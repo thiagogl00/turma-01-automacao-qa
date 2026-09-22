@@ -82,3 +82,31 @@ Também é possível executar qualquer arquivo diretamente:
 npx tsx src/aula25/condicionais.ts
 npx tsx src/atividades/casos-de-teste.ts
 ```
+
+### Testes
+
+Os testes automatizados ficam em `src/testes` e são executados com Vitest:
+
+```bash
+npm test
+```
+
+Executa todos os arquivos de teste:
+
+- `src/testes/createUser.test.ts`
+- `src/testes/login.test.ts`
+- `src/testes/math.test.ts`
+- `src/testes/soma.test.ts`
+- `src/testes/arrays-promises.test.ts`
+
+Para executar apenas um arquivo de teste:
+
+```bash
+npx vitest run src/testes/arrays-promises.test.ts
+```
+
+Para executar os testes em modo de observação:
+
+```bash
+npm test
+```
