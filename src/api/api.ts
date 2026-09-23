@@ -1,11 +1,11 @@
-interface Postagem {
+export interface Postagem {
     id: number,
     title:string,
     body:string
 }
 
 //GET: Buscar postagem especifica
-/* async function buscarPostagem(id: number):Promise<Postagem>{
+export async function buscarPostagem(id: number):Promise<Postagem>{
     const res = await fetch(
         `https://jsonplaceholder.typicode.com/posts/${id}`
     );
@@ -17,15 +17,15 @@ interface Postagem {
     return resget;
 }
 
-const get = await buscarPostagem(1);
+//const get = await buscarPostagem(1);
 
-console.log(get);
+//console.log(get);
 
-console.log(get.title);
- */
+//console.log(get.title);
+
 
 //GET: Buscar todas as postagens
-/* async function buscarPostagem():Promise<Postagem>{
+export async function buscarPostagemEspecifica():Promise<Postagem>{
     const res = await fetch(
         `https://jsonplaceholder.typicode.com/posts`
     );
@@ -37,13 +37,13 @@ console.log(get.title);
     return resget;
 }
 
-const get = await buscarPostagem();
+//const get = await buscarPostagemEspecifica();
 
-console.log(get);
- */
+//console.log(get);
+
 
 //GET: Buscar um comentario especifico
-/* async function buscarPostagem(id:number):Promise<Postagem>{
+export async function buscarComentario(id:number):Promise<Postagem>{
     const res = await fetch(
         `https://jsonplaceholder.typicode.com/posts/${id}/comments`
     );
@@ -55,13 +55,13 @@ console.log(get);
     return resget;
 }
 
-const get = await buscarPostagem(1);
+//const get = await buscarComentario(1);
 
-console.log(get);
- */
+//console.log(get);
+ 
 
 //Post: Cria uma nova postagem
-/* async function criarPostagem():Promise<Postagem>{
+export async function criarPostagem():Promise<Postagem>{
     const res = await fetch(
         `https://jsonplaceholder.typicode.com/posts`,{
             method:'POST',
@@ -83,13 +83,13 @@ console.log(get);
     return resPost;
 }
 
-const post = await criarPostagem();
+//const post = await criarPostagem();
 
-console.log(post)
- */
+//console.log(post)
+ 
 
 //PUT: Atualiza uma postagem completa
-/* async function atualizarPostagemCompleta(id:number):Promise<Postagem>{
+export async function atualizarPostagemCompleta(id:number):Promise<Postagem>{
     const corpoEnviado = {
         "userId": 2,
         "title": "Atualização de postagem com PUT",
@@ -115,12 +115,12 @@ console.log(post)
         return resPut;
     }
 
-    const put = await atualizarPostagemCompleta(1);
+    //const put = await atualizarPostagemCompleta(1);
 
-    console.log(put) */
+    //console.log(put)
 
 //DELETE: Exclui uma postagem
-/* async function deletar(id:number):Promise<void>{
+export async function deletar(id:number):Promise<void>{
     const res = await fetch(
         `https://jsonplaceholder.typicode.com/posts/${id}`,{
             method:'DELETE',
@@ -129,11 +129,11 @@ console.log(post)
     console.log(res.status)
  }
 
-deletar(1); */
+//deletar(1); 
 
 
     //PATCH: Atualiza uma postagem parcialmente
-async function atualizarPostagemParcialmente(id:number):Promise<Postagem>{
+export async function atualizarPostagemParcialmente(id:number):Promise<Postagem>{
     const corpoEnviado = {
         "title": "Atualização de postagem com PATCH"
     }
@@ -156,7 +156,7 @@ async function atualizarPostagemParcialmente(id:number):Promise<Postagem>{
         return resPatch;
     }
 
-    const patch = await atualizarPostagemParcialmente(1);
+    //const patch = await atualizarPostagemParcialmente(1);
 
-    console.log(patch);
-    console.log(patch.title);
+    //console.log(patch);
+    //console.log(patch.title);
