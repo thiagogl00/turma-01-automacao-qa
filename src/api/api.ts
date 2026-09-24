@@ -1,11 +1,11 @@
-export interface Postagem {
+interface Postagem {
     id: number,
     title:string,
     body:string
 }
 
 //GET: Buscar postagem especifica
-export async function buscarPostagem(id: number):Promise<Postagem>{
+async function buscarPostagemEspecifica(id: number):Promise<Postagem>{
     const res = await fetch(
         `https://jsonplaceholder.typicode.com/posts/${id}`
     );
@@ -17,7 +17,7 @@ export async function buscarPostagem(id: number):Promise<Postagem>{
     return resget;
 }
 
-//const get = await buscarPostagem(1);
+//const get = await buscarPostagemEspecifica(1);
 
 //console.log(get);
 
@@ -25,7 +25,7 @@ export async function buscarPostagem(id: number):Promise<Postagem>{
 
 
 //GET: Buscar todas as postagens
-export async function buscarPostagemEspecifica():Promise<Postagem>{
+async function buscarPostagens():Promise<Postagem>{
     const res = await fetch(
         `https://jsonplaceholder.typicode.com/posts`
     );
@@ -37,13 +37,13 @@ export async function buscarPostagemEspecifica():Promise<Postagem>{
     return resget;
 }
 
-//const get = await buscarPostagemEspecifica();
+//const get = await buscarPostagens();
 
 //console.log(get);
 
 
-//GET: Buscar um comentario especifico
-export async function buscarComentario(id:number):Promise<Postagem>{
+//GET: Buscar comentarios de um post especifico
+async function buscarComentario(id:number):Promise<Postagem>{
     const res = await fetch(
         `https://jsonplaceholder.typicode.com/posts/${id}/comments`
     );
@@ -61,7 +61,7 @@ export async function buscarComentario(id:number):Promise<Postagem>{
  
 
 //Post: Cria uma nova postagem
-export async function criarPostagem():Promise<Postagem>{
+async function criarPostagem():Promise<Postagem>{
     const res = await fetch(
         `https://jsonplaceholder.typicode.com/posts`,{
             method:'POST',
@@ -115,9 +115,9 @@ export async function atualizarPostagemCompleta(id:number):Promise<Postagem>{
         return resPut;
     }
 
-    //const put = await atualizarPostagemCompleta(1);
+//const put = await atualizarPostagemCompleta(1);
 
-    //console.log(put)
+//console.log(put)
 
 //DELETE: Exclui uma postagem
 export async function deletar(id:number):Promise<void>{
@@ -156,7 +156,7 @@ export async function atualizarPostagemParcialmente(id:number):Promise<Postagem>
         return resPatch;
     }
 
-    //const patch = await atualizarPostagemParcialmente(1);
+//const patch = await atualizarPostagemParcialmente(1);
 
-    //console.log(patch);
-    //console.log(patch.title);
+//console.log(patch);
+//console.log(patch.title);
